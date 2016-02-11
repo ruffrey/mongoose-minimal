@@ -1,8 +1,8 @@
 {
-  "name": "mongoose",
-  "description": "Mongoose MongoDB ODM",
+  "name": "mongoose-minimal",
+  "description": "Fork of Mongoose.js (MongoDB ODM) requiring no native modules",
   "version": "4.4.2",
-  "author": "Guillermo Rauch <guillermo@learnboost.com>",
+  "author": "Jeff H. Parrish <jeffhparrish@gmail.com>",
   "keywords": [
     "mongodb",
     "document",
@@ -23,7 +23,7 @@
     "bson": "0.4.21",
     "hooks-fixed": "1.1.0",
     "kareem": "1.0.1",
-    "mongodb": "2.1.5",
+    "mongodb-minimal": "^2015.8.1",
     "mpath": "0.2.1",
     "mpromise": "0.5.5",
     "mquery": "1.6.3",
@@ -70,20 +70,19 @@
     "install-browser": "npm install `node format_deps.js`",
     "test": "mocha test/*.test.js test/**/*.test.js",
     "posttest": "eslint . --quiet",
-    "test-cov": "istanbul cover --report text --report html _mocha test/*.test.js"
+    "test-cov": "istanbul cover --report text --report html _mocha test/*.test.js",
+    "postinstall": "sh patch.sh"
   },
   "main": "./index.js",
   "engines": {
     "node": ">=0.6.19"
   },
   "bugs": {
-    "url": "https://github.com/Automattic/mongoose/issues/new",
-    "email": "mongoose-orm@googlegroups.com"
+    "url": "https://github.com/ruffrey/mongoose-minimal/issues/new"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Automattic/mongoose.git"
+    "url": "git://github.com/ruffrey/mongoose-minimal.git"
   },
-  "homepage": "http://mongoosejs.com",
   "browser": "lib/browser.js"
 }
